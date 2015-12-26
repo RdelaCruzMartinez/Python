@@ -9,16 +9,15 @@ una vez hayas intercambiado sus valores.
 """
 
 def intercambiar_valores(primerValor, segundoValor):
+    cambioValor = primerValor
+    primerValor = segundoValor
+    segundoValor = cambioValor
+    print("Ahora el primer valor es:",primerValor)
+    print("Ahora el segundo valor es:",segundoValor)
 
-primerValor= int(input("Por favor introduce el primer valor:" ))
-segundoValor= int(input("Por favor introduce el segundo valor:"))
+primerValor = int(input("Por favor introduce el primer valor:" ))
+segundoValor = int(input("Por favor introduce el segundo valor:"))
 print ("Tu primer valor es:",primerValor)
 print ("Tu segundo valor es:",segundoValor)
 
-cambioValor = primerValor
-primerValor = segundoValor
-segundoValor = cambioValor
-
-print("Ahora el primer valor es:",primerValor)
-print("Ahora el segundo valor es:",segundoValor)
-input ("Presiona cualquier tecla para salir")
+intercambiar_valores(primerValor, segundoValor)
