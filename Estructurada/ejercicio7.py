@@ -6,14 +6,14 @@ Consideramos al número 0 positivo.
 """
 
 
-numero= int(input("Por favor introduce un número:"))
+numero = float(input("Por favor introduce un número:"))
 
-if numero <0:
+if numero < 0:
     print ("El número leído es negativo")
-elif numero >-1:
+else:
     print ("El número leído es positivo")
 
-input ("Presiona cualquier tecla para salir")
+
 
 
 

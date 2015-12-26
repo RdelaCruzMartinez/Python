@@ -14,9 +14,9 @@ visualizarse un mensaje de error.
 def sumacondicional(a,b):
     if a % 2 == 1 or b % 2 == 1:
         return -1
-    elif a>50:
+    elif a > 50:
         return -2
-    elif b>500 or b<100:
+    elif b > 500 or b < 100:
         return -3
     else:
         return a+b

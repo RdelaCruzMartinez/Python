@@ -10,9 +10,9 @@ Se cumple que N3 = N1 + N2
 Los números no cumplen la condición
 """
 
-numberOne= int(input("Introduce el primer número:"))
-numberTwo= int(input("Introduce el segundo número:"))
-numberThree= int(input("Introduce el tercer número:"))
+numberOne   = int(input("Introduce el primer número:"))
+numberTwo   = int(input("Introduce el segundo número:"))
+numberThree = int(input("Introduce el tercer número:"))
 
 if numberOne == numberTwo + numberThree:
     print ("Se cumple que N1 = N2 + N3")
@@ -23,7 +23,7 @@ elif numberThree == numberOne + numberTwo:
 else:
     print ("Los números no cumplen la condición")
 
-input("Presiona cualquier tecla para salir")
+
 
     
 

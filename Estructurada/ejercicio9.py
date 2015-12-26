@@ -8,18 +8,13 @@ La salida ha de tener el siguiente formato:
 “No se calcula la suma porque alguno de los números o los dos no son positivos”.
 """
 
-numberOne= int(input("Introduce el primer número:"))
-numberTwo= int(input("introduce el segundo número:"))
+numberOne = int(input("Introduce el primer número:"))
+numberTwo = int(input("introduce el segundo número:"))
 
-if numberOne >-1:
-    if numberTwo >-1:
+if numberOne and numberTwo > -1:
         print (numberOne + numberTwo)
-    else:
-       print("No se calcula la suma porque alguno de los números o los dos no son positivos")
-        
 else:
     print ("No se calcula la suma porque alguno de los números o los dos no son positivos")
 
-input("Presiona cualquier tecla para salir")
 
     

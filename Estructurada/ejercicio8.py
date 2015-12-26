@@ -7,15 +7,18 @@ b) el primer número (valor) es menor que el segundo (valor;
 c) los dos números son iguales (valor).
 """
 
+def comparador(a,b):
+    if a > b:
+        print ("%i es mas grande que %i" % (a,b))
+    elif a == b:
+        print ("los numeros son iguales:",a)
+    else:
+        print ("%i es mas grande que %i" % (b,a))
 
-numberOne= int(input("Por favor introduce el primer número:"))
-numberTwo= int(input("Por favor introduce el segundo número:"))
 
-if numberOne > numberTwo:
-    print (numberOne,"es mayor")
-if numberTwo > numberOne:
-    print (numberTwo,"es mayor")
-elif numberOne == numberTwo:
-    print ("Los dos números son iguales")
+numberOne = int(input("Por favor introduce el primer número:"))
+numberTwo = int(input("Por favor introduce el segundo número:"))
 
-input ("Presiona cualquier tecla para salir")
+if __name__ == '__main__':
+    comparador(numberOne,numberTwo)
+
