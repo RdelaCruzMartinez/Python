@@ -6,19 +6,19 @@ el doble del número leido y el triple del mismo.
 
 
 def multiplicarNum(numero, multiplicador):
-	try:
-	    print ('Tu numero inicial es:', numero)
-	    contador = 1
-	    while multiplicador > 0:
-		    print (numero * contador)
-		    contador = contador + 1
-		    multiplicador -= 1
-	except ValueError:
-		print ('Error, el valor introducido no es un numero entero')
-	except TypeError:
-		print ('Error, el segundo valor introducido no es un numero entero')
+    try:
+        a = int(numero)
+        b = int(multiplicador) + 1
+        contador = 1
+        while b > contador:
+            print (a * contador)
+            contador += 1
+    except ValueError:
+        print("un valor introducido no es un numero entero")
 
 
-numero = input("Por favor introduce un numero entero: ")
-multiplicador = int(input("introduce cuantas veces quieres multiplicarlo:")
-multiplicarNum(numero, multiplicador)
+numero = input("introduce un numero:")
+multiplicador = input("introduce cuantas veces quieres multiplicar el numero:")
+
+if __name__ == '__main__':
+    multiplicarNum(numero,multiplicador)
