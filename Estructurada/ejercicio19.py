@@ -6,7 +6,7 @@ números introducidos.
 
 
 def mayorDos(a,b):
-    if a>b:
+    if a > b:
         return a
     else:
         return b
@@ -17,9 +17,9 @@ def mayorCinco(a):
     pasoTres=mayorDos(pasoUno,pasoDos)
     resultado=mayorDos(a[0:1],pasoTres)
     return resultado
-    
-contador=5
+
 contenedorNum=[]
+contador=5
 while contador > 0:
     numero=(int(input('Introduce un número: ')))
     contenedorNum.append(numero)
