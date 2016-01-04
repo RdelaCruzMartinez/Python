@@ -3,11 +3,16 @@
 estamos estudiando metodología de la programación.
 """
 
-final=0
+def repeticion(mensaje, veces):
+    contador  = 0
+    while contador != veces:
+        print (mensaje)
+        contador += 1
 
-while final <5:
-    print ("Estamos estudiando metodología de la programación")
-    final=final+1
-    
-input ("Presiona cualquier tecla para salir")
 
+
+mensaje = input('introduce el mensaje que quieres repetir:')
+veces   = int(input('introduce cuantas veces quieres que se repita:'))
+
+if __name__ == '__main__':
+    repeticion(mensaje,veces)
