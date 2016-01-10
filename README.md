@@ -1,6 +1,6 @@
 # Código Python ![alt text](http://manongs.com/static/article/2015/1126/python-logo.png)
 
-Código elaborado durante el transcurso del FP dual de grado superior DAW (Desarrollo de de aplicaciones Web).
+Código elaborado durante el transcurso del FP dual de grado superior DAW (Desarrollo de aplicaciones Web).
 
 Ni el código ni los ejercicios están resueltos de la forma más eficiente dado que éstos fueron elaborados durante
 el transcurso de mi aprendizaje y con los recursos que disponía en el momento
