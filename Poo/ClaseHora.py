@@ -70,7 +70,7 @@ if __name__ == '__main__':
                    [tiempo.getMinutos(),0],
                    [tiempo.getSegundos(),0]]
     for caso in testNoRango:
-        if testEnRango[0][0] == testEnRango[0][1]:
+        if testNoRango[0][0] == testNoRango[0][1]:
             print('Test fuera de rango set/get',caso,'OK')
         else:
             print('Test fuera de rango set/get',caso,'FAIL')
