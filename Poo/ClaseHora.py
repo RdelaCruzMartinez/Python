@@ -22,7 +22,7 @@ class Hora:
         if horas in range(25):
             self.hora = int(horas)
         else:
-            pass
+            self.hora = 0
 
     def getHoras(self):
         return self.hora
@@ -31,7 +31,7 @@ class Hora:
         if minutos in range (60):
             self.minutos = int(minutos)
         else:
-            pass
+            self.minutos = 0
 
     def getMinutos(self):
         return self.minutos
@@ -40,7 +40,7 @@ class Hora:
         if segundos in range (60):
             self.segundos = int(segundos)
         else:
-            pass
+            self.segundos = 0
 
     def getSegundos(self):
         return self.segundos
@@ -57,7 +57,7 @@ if __name__ == '__main__':
                   [tiempo.getMinutos(),30],
                   [tiempo.getSegundos(),45]]
     for caso in testEnRango:
-        if testEnRango[0][0] == testEnRango[0][1]:
+        if caso[0] == caso[1]:
             print('Test en rango set/get',caso,'OK')
         else:
             print('Test en rango set/get',caso,'FAIL')
@@ -66,11 +66,12 @@ if __name__ == '__main__':
     tiempo.setMinutos(2.2)
     tiempo.setSegundos(60)
 
+
     testNoRango = [[tiempo.getHoras(),0],
                    [tiempo.getMinutos(),0],
                    [tiempo.getSegundos(),0]]
     for caso in testNoRango:
-        if testNoRango[0][0] == testNoRango[0][1]:
+        if caso[0] == caso[1]:
             print('Test fuera de rango set/get',caso,'OK')
         else:
             print('Test fuera de rango set/get',caso,'FAIL')
