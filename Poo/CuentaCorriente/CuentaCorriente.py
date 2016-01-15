@@ -1,7 +1,27 @@
 from check_dni import *
 
 class CuentaCorriente:
+    '''
+La clase Cuenta corriente permite aignar unas propiedades a un supuesto usuario y efectuar acciones
+como la retirada/ingreso de efectivo llevando la cuenta del total y de la posibilidad de estar en
+numeros rojos.
 
+Propiedades de la Clase:
+    nombre
+    apellidos
+    direccion
+    telefono
+    saldo
+    nif
+
+Metodos (aparte de los seters y geters) de la Clase:
+    retirarDinero
+    ingresarDinero
+    consultarCuenta
+    saldoNegativo ==> Devuelve True si la cuenta esta en numeros rojos
+
+    '''
+##########PROPIEDADES##########
     def __init__(self):
         self.nombre    = ""
         self.apellidos = ""
@@ -11,6 +31,7 @@ class CuentaCorriente:
         # Has - a
         self.nif       = Dni()
 
+##########Seters y Geters##########
     def setNombre(self, nombre):
         self.nombre = nombre
 
@@ -47,10 +68,11 @@ class CuentaCorriente:
     def getNif(self):
         return self.nif
 
+##########Metodos/Funciones de la Clase##########
     def retirarDinero(self, cantidad):
         self.setSaldo(self.getSaldo() - cantidad)
 
-    def ingresardinero(self, cantidad):
+    def ingresarDinero(self, cantidad):
         self.setSaldo(self.getSaldo() + cantidad)
 
     def consultarCuenta(self):
@@ -83,14 +105,14 @@ if __name__ == '__main__':
                         [cuenta.getTelefono(),'112']]
 
     for caso in testInfoPersonal:
-        if testInfoPersonal[0][0] == testInfoPersonal[0][1]:
+        if caso[0] == caso[1]:
             print(caso, 'OK')
         else:
             print(caso, 'FAIL')
 
  #Test Saldo
     cuenta.setSaldo(510.50)
-    cuenta.ingresardinero(110.25)
+    cuenta.ingresarDinero(110.25)
     cuenta.retirarDinero(120.75)
     if cuenta.getSaldo() == 500:
         print('Test Saldo OK')
@@ -102,6 +124,8 @@ if __name__ == '__main__':
         print('Test Saldo negativo OK')
     else:
         print('Test Saldo negativo FAIL')
+
+
 
 
 
