@@ -77,13 +77,13 @@ Metodos (aparte de los seters y geters) de la Clase:
     def contadorConsumo(self,segundos):
         horas   = 0
         minutos = 0
-        if segundos < 60:
+        if segundos > 60:
             minutos += segundos /60
             segundos = 0
-        if minutos < 60:
+        if minutos > 60:
            horas  += minutos / 60
            minutos = 0
-        if horas > 0:
+        if horas < 0:
             horas = 0
 
         self.setConsumo(self.consumo.getHoras()+ horas,
