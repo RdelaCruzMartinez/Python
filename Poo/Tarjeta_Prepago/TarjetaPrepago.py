@@ -40,7 +40,7 @@ Metodos (aparte de los seters y geters) de la Clase:
         self.saldo = saldo
 
     def getSaldo(self):
-        return str(self.saldo) + '€'
+        return str("%.2f" % (self.saldo)) + '€'
 
     def setNif(self, nif):
         self.nif = nif
@@ -63,7 +63,7 @@ Metodos (aparte de los seters y geters) de la Clase:
 
     def realizarLlamada(self,segundos):
         #self.contadorConsumo(segundos)
-        self.saldo -= 0.15 + segundos
+        self.saldo -= 0.15 + (0.01 * segundos)
 
     def consultarTarjeta(self):
         print('Num Tel:',self.getNumeroTelefono())
@@ -71,26 +71,26 @@ Metodos (aparte de los seters y geters) de la Clase:
         print('Consumo:',self.getConsumo())
         print('Saldo Actual:',self.getSaldo())
 
-
-#Formula para actualizar el consumo en construcción.
+#Formula para actualizar el consumo en construcción
 """
-    def contadorConsumo(self,segundos):
-        horas   = 0
-        minutos = 0
-        if segundos > 60:
-            minutos += segundos /60
-            segundos = 0
-        if minutos > 60:
-           horas  += minutos / 60
-           minutos = 0
+    def contadorConsumo(self,segundosLlamada):
+        horas       = self.consumo.getHoras()
+        minutos     = self.consumo.getMinutos()
+        segundos    = self.consumo.getSegundos() + segundosLlamada
+
+        if segundos >= 60:
+            minutos += segundos //60
+
+        if minutos >= 60:
+            horas += minutos //60
+
         if horas < 0:
             horas = 0
 
-        self.setConsumo(self.consumo.getHoras()+ horas,
-                        self.consumo.getMinutos() + minutos,
-                        self.consumo.getSegundos() + segundos)
-
+        self.setConsumo(horas,minutos,segundos)
 """
+
+
 
 
 
@@ -100,3 +100,11 @@ if __name__ == '__main__':
     tarjeta.setNumeroTelefono(666242197)
     tarjeta.setConsumo(1,30,49)
     tarjeta.setSaldo(10.52)
+    print(tarjeta.getConsumo())
+    print(tarjeta.getSaldo())
+    tarjeta.realizarLlamada(330)
+    print(tarjeta.getConsumo())
+
+
+
+
