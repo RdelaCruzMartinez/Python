@@ -6,7 +6,7 @@ def raizCuadrada(x, eps = 10e-7):
     try:
         #Precondiciones 1/3, un número dentro de un rango procesable sin problemas.
         if len(x) >= 10:
-            raise Exception("Porfavor introduce un número mas corto")
+            raise Exception("Por favor introduce un número mas corto")
         # 2/3 número real
         else:
             x = float(x)
